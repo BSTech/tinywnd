@@ -23,8 +23,8 @@ bs_stricomp PROC ; bool (char*, char*)
     push ecx
     push esi
     
-    mov ecx, [ebp + 8]              ; ecx = [esp + offset of "lhs" parameter]
-    mov esi, [ebp + 12]             ; esi = [esp + offset of "rhs" parameter]
+    mov ecx, [ebp + 8]          ; ecx = [esp + offset of "lhs" parameter]
+    mov esi, [ebp + 12]         ; esi = [esp + offset of "rhs" parameter]
 
     xor eax, eax                ; eax low (al) will store the result, currently 0
     
