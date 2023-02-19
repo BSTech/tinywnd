@@ -74,7 +74,6 @@ bs_init PROC
 
     and ecx, 1
     mov al, cl
-    ;mov eax, ecx                   ; return result(s) of cmp instructions above (from cl)
     
 fn_exit:
     
@@ -90,7 +89,6 @@ bs_init ENDP
 
 bs_find_loaded_module PROC ; void* (wchar_t* dllname)
     enter 0, 0
-    ;mov esi, [ebp + 8]
     
     xor eax, eax
     push ebx
