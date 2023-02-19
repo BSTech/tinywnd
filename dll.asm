@@ -23,15 +23,13 @@ bs_getprocaddress PROC ; void* (void* dllbase, char* fn_name)
     mov esi, [ebp + 8] ; dllbase
     mov ebx, [ebp + 12] ; fn_name
     
-    ;mov esi, [esi]
-    
     push ecx
     push edx
     push edi
     
     xor eax, eax
     
-    ; // check base and fn_name is valid and the first character of fn_name is not null (to check empty string)
+    ; check base and fn_name is valid and the first character of fn_name is not null (to check empty string)
     test esi, esi
     je Fn_exit
     test ebx, ebx
@@ -74,8 +72,8 @@ find_name:
     dec ebx                         ; if (--ebx == 0)
     jne Find_name                   ;     break;
     
-    ; // not found and reached the "end" of the list
-    ; // after the iteration, eax already holds our return value 0 since the comparator function has returned 0
+    ; not found and reached the "end" of the list
+    ; after the iteration, eax already holds our return value 0 since the comparator function has returned 0
     jmp Fn_exit
     
 found:
