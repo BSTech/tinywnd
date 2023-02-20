@@ -18,9 +18,7 @@ _just when you are too bored to make this a thing_
 
 _*: I tried to find and understand why it occurs but couldn't find it (yet)_
 
-### Building:
-See `build.cmd` -_you need VS and MASM (`ml.exe`) installed on your system_- <br><br>
-As VSCode project:
+### Building (As VSCode project):
 - run VS developer command prompt
 - `cd` into the project folder
 - run `code .` (the dot is included)
